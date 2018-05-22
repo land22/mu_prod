@@ -1,0 +1,3 @@
+mu_home_homepage:
+    path:     /
+    defaults: { _controller: MUHomeBundle:Default:index }
