@@ -1,3 +1,7 @@
 mu_home_homepage:
     path:     /
     defaults: { _controller: MUHomeBundle:Default:index }
+mu_home_accueil:
+    path:     /accueil
+    defaults: { _controller: MUHomeBundle:Home:index }
+
