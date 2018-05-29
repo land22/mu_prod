@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>{%block title%}Musée de Louvre {%endblock%} </title>
+	<title>{%block title%}Musée du Louvre {%endblock%} </title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
@@ -32,25 +32,25 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt="Progressus HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Accueil</a></li>
-					<li><a href="about.html">Billeterie</a></li>
+					<li class="active"><a href="{{ path('mu_home_homepage')}}">Accueil</a></li>
+					<li><a href="{{ path('mu_home_billeterie') }}">Billeterie</a></li>
 
 					<li><a class="btn" href="signin.html">Administration</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
 	</div> 
-	<!-- /.navbar -->
+	<!-- /.navbar --> 
 
 	<!-- Header -->
 	<header id="head">{%block head %}
 		<div class="container">
 			<div class="row">
-				<h1 class="lead">Bienvenue sur le site web du musée de Louvre</h1>
+				<h1 class="lead">Bienvenue sur le site web du musée du Louvre</h1>
 				<p class="tagline">L’art, c’est le plus court chemin de l’homme à l’homme. Citations d'André Malraux  </p>
 			</div>
 		</div>{%endblock%}
@@ -155,8 +155,6 @@
 						<div class="widget-body">
 							<p>+237 697943293<br>
 								<a href="mailto:#">landrywabo8@gmail.com</a><br>
-								<br>
-								Yaoundé Cameroun
 							</p>	
 						</div>
 					</div>
@@ -165,10 +163,8 @@
 						<h3 class="widget-title">Suivez moi :</h3>
 						<div class="widget-body">
 							<p class="follow-me-icons">
-								<a href=""><i class="fa fa-twitter fa-2"></i></a>
-								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
-								<a href=""><i class="fa fa-github fa-2"></i></a>
-								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+								<a href="{{ asset('https://github.com/land22')}}"><i class="fa fa-github fa-2"></i></a>
+								<a href="{{ asset('https://www.facebook.com/')}}"><i class="fa fa-facebook fa-2"></i></a>
 							</p>	
 						</div>
 					</div>
@@ -184,8 +180,8 @@
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="#">Accueil</a> | 
-								<a href="about.html">Billeterie</a> |
+								<a href="{{ path('mu_home_homepage') }}">Accueil</a> | 
+								<a href="{{ path('mu_home_billeterie') }}">Billeterie</a> |
 								<b><a href="signup.html">Administration</a></b>
 							</p>
 						</div>
