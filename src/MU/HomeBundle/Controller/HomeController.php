@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class HomeController extends Controller
 {
@@ -34,11 +35,12 @@ class HomeController extends Controller
     $formBuilder
       ->add('nom', TextType::class)
       ->add('prenom', TextType::class)
-      ->add('date_de_naissance', DateType::class);
-
+      ->add('pays', TextType::class)
+      ->add('date_de_naissance', DateType::class,array('widget' => 'single_text','attr' => array('class' => 'js-datepicker')));
+  
       $formBuilder1
-      ->add('type_billet', TextType::class)
-      ->add('date_reservation', DateType::class);
+      ->add('type_billet', ChoiceType::class, array('choices' =>array('journée' => 'journée','demi-journée' => 'demi-journée')))
+      ->add('date_reservation', DateType::class,array('widget' => 'single_text','attr' => array('class' => 'js-datepicker')));
 
     // Pour l'instant, pas de candidatures, catégories, etc., on les gérera plus tard
     // À partir du formBuilder, on génère le formulaire

@@ -3,9 +3,53 @@
 {%block container%} 
 <div class="well">
 
-  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}  
-{{ form(form) }}
-{{ form(form1) }}
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }} 
+      <div class="row">
+       <div class="col-sm-6 text-right">
+		{{ form_label(form1.date_reservation, "Date de reservation", {'label_attr': {'class': 'gdg'}}) }}
+		{{ form_widget(form1.date_reservation, {'attr': {'class': 'fggf'}})}}
+		</div>
+	  </div>
+		<br />
+	
+	<div class="row billet">
+     
+
+		<div class="col-sm-3">
+		{{ form_label(form.nom, "Nom", {'label_attr': {'class': 'col-sm-1 control-label'}}) }}
+		{{ form_widget(form.nom, {'attr': {'class': 'form-control col-sm-1'}})}}
+		</div>
+
+		<div class="col-sm-3">
+		{{ form_label(form.prenom, "Prénom", {'label_attr': {'class': 'col-sm-1 control-label'}}) }}
+		{{ form_widget(form.prenom, {'attr': {'class': 'form-control col-sm-1'}})}}
+		</div>
+
+		<div class="col-sm-2">
+		{{ form_label(form.pays, "Pays", {'label_attr': {'class': 'col-sm-1 control-label'}}) }}
+		{{ form_widget(form.pays, {'attr': {'class': 'form-control col-sm-1'}})}}
+		</div>
+
+		<div class="col-sm-2">
+		{{ form_label(form.date_de_naissance, "Date de naissance", {'label_attr': {'class': 'd'}}) }}
+		{{ form_widget(form.date_de_naissance, {'attr': {'class': 'f'}})}}
+		</div>
+
+	   <div class="col-sm-2">
+		 <label class="checkbox">Tarif reduit</label>
+		 <input type="checkbox"> 
+		</div>
+	</div>
+      <br />
+
+      <div class="row">
+      <div class="col-sm-6 text-right">
+			<a href="" class="btn btn-success">Ajouter un billet</a>
+		</div>
+		<div class="col-sm-6 text-right">
+			<input class="btn btn-info" type="submit" value="payment">
+		</div>
+	  </div>
 
   {# Fermeture de la balise <form> du formulaire HTML #}
 
@@ -13,4 +57,7 @@
 </div>
 
 
+
  {%endblock%}
+
+

@@ -131,28 +131,5 @@ class Visiteurs
     {
         return $this->dateDeNaissance;
     }
-
-    /**
-     * Set pays
-     *
-     * @param string $pays
-     *
-     * @return Visiteurs
-     */
-    public function setPays($pays)
-    {
-        $this->pays = $pays;
-
-        return $this;
-    }
-
-    /**
-     * Get pays
-     *
-     * @return string
-     */
-    public function getPays()
-    {
-        return $this->pays;
-    }
 }
+
