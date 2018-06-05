@@ -1,3 +1,16 @@
 {% extends "MUHomeBundle::layout.html.twig" %}
 
-{%block container%}   Page du formulaire {%endblock%}
+{%block container%} 
+<div class="well">
+
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}  
+{{ form(form) }}
+{{ form(form1) }}
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+
+  {{ form_end(form) }}
+</div>
+
+
+ {%endblock%}
