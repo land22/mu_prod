@@ -36,16 +36,9 @@ class Visiteurs
     private $prenom;
 
     /**
-     * @var string
+     * @var \DateTime
      *
-     * @ORM\Column(name="pays", type="string", length=10)
-     */
-    private $pays;
-
-    /**
-     * @var \Date
-     *
-     * @ORM\Column(name="date_de_naissance", type="date")
+     * @ORM\Column(name="date_de_naissance", type="datetime")
      */
     private $dateDeNaissance;
 
@@ -131,28 +124,5 @@ class Visiteurs
     {
         return $this->dateDeNaissance;
     }
-
-    /**
-     * Set pays
-     *
-     * @param string $pays
-     *
-     * @return Visiteurs
-     */
-    public function setPays($pays)
-    {
-        $this->pays = $pays;
-
-        return $this;
-    }
-
-    /**
-     * Get pays
-     *
-     * @return string
-     */
-    public function getPays()
-    {
-        return $this->pays;
-    }
 }
+
